@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.16/jspdf.plugin.autotable.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD</h1>
+        <form id="order-form">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="address" placeholder="Address" required>
+            <input type="text" id="phoneNumber" placeholder="Phone Number" required>
+            <input type="text" id="price" placeholder="Price" required>
+            <input type="text" id="timeOfOrder" placeholder="Time of Order" required>
+            <input type="text" id="productName" placeholder="Product Name" required>
+            <input type="file" id="image" accept=".jpg, .png" required>
+            <button type="submit" id="submit-btn">Add Order</button>
+            <button type="button" id="update-btn" style="display: none;">Update Order</button>
+        </form>
+        <table id="order-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Phone Number</th>
+                    <th>Price</th>
+                    <th>Time of Order</th>
+                    <th>Product Name</th>
+                    <th>Image</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="order-list"></tbody>
+        </table>
+        <button id="backup-btn">Backup Orders</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
